@@ -15,6 +15,7 @@ class CreatePhoneNumsTable extends Migration
         //
         Schema::create('phone_nums', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('number');
             $table->enum('type', ['phone', 'mobile']);
             $table->integer('member_id')->unsigned();
             $table->foreign('member_id')->references('id')->on('members')->onDelete('cascade');

@@ -25,9 +25,9 @@ class CreateMembersTable extends Migration
             $table->string('gender');
             $table->string('birthdate');
             $table->string('marital_status');
-            $table->string('facebook_link');
+            $table->string('facebook_link')->nullable();
             $table->string('batch');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

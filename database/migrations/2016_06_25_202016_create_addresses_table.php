@@ -17,10 +17,11 @@ class CreateAddressesTable extends Migration
             $table->increments('id');
             $table->string('quarter');
             $table->string('street');
-            $table->string('zone_location');
+            $table->string('zone_location')->nullable();
+            $table->string('floor_num');
             $table->string('appartment_num');
             $table->string('home_num');
-            $table->string('details');
+            $table->string('details')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

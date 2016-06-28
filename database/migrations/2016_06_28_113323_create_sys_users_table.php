@@ -15,8 +15,6 @@ class CreateSysUsersTable extends Migration
         //
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
             $table->string('password');
             $table->integer('member_id')->unsigned();
             $table->foreign('member_id')->references('id')->on('members')->onDelete('cascade');
