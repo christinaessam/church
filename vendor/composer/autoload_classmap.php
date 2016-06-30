@@ -10,7 +10,7 @@ return array(
     'CreateMemberUserTable' => $baseDir . '/database/migrations/2016_06_28_113607_create_member_user_table.php',
     'CreateMembersTable' => $baseDir . '/database/migrations/2016_06_25_204425_create_members_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-    'CreatePhoneNumsTable' => $baseDir . '/database/migrations/2016_06_25_204723_create_phone_nums_table.php',
+    'CreatePhoneNums' => $baseDir . '/database/migrations/2016_06_30_102121_create_phone_nums.php',
     'CreateSysUsersTable' => $baseDir . '/database/migrations/2016_06_28_113323_create_sys_users_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

@@ -1,4 +1,3 @@
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,6 +29,7 @@
 <div class="lc-block toggled" id="l-login">
 
     <form action="/login"  id="loginForm" method="post" onsubmit="return validate();">
+        {{$user_data['message']}}
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="input-group m-b-20">
             <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>

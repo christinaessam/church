@@ -277,15 +277,6 @@
                 <a href="index.html"><i class="zmdi zmdi-home"></i> Home</a>
             </li>
 
-
-
-
-
-
-
-
-
-
             <li class="sub-menu">
                 <a href="form-examples.html"><i class="zmdi zmdi-menu"></i> 3 Level Menu</a>
 
@@ -350,20 +341,21 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h2>Register a New User <small>Extend form controls by adding text or buttons before, after, or on both sides of any text-based inputs.</small></h2>
+                    <h2>Register a New Member<small>Extend form controls by adding text or buttons before, after, or on both sides of any text-based inputs.</small></h2>
                 </div>
 
-                <div class="card-body card-padding">
+{{--                {!! Form::open(['route'=>['member.store'],'method'=>'post']) !!}--}}
+               <form method="POST" action="member">
+                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-
-
+                   <div class="card-body card-padding">
 
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
                                 <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="Full Name">
+                                    <input type="text" name='name' class="form-control" placeholder="Full Name">
                                 </div>
                             </div>
 
@@ -372,7 +364,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="zmdi zmdi-local-phone"></i></span>
                                 <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="Contact Number">
+                                    <input type="text" name='phone_num' class="form-control" placeholder="Contact Number">
                                 </div>
                             </div>
 
@@ -381,94 +373,148 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
                                 <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="Email Address">
+                                    <input type="text" name='email' class="form-control" placeholder="Email Address">
                                 </div>
                             </div>
 
                             <br/>
 
+                            {{--<div class="input-group">--}}
+                                {{--<span class="input-group-addon"><i class="zmdi zmdi-pin"></i></span>--}}
+                                {{--<div class="fg-line">--}}
+                                    {{--<input type="text" class="form-control" placeholder="Home Address">--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+
+                        </div>
+
+                        <div class="col-sm-4">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="zmdi zmdi-pin"></i></span>
+                                <span class="input-group-addon last"><i class="zmdi zmdi-account-circle"></i></span>
                                 <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="Home Address">
+                                    <input type="text" name='confession_father' class="form-control" placeholder="Ab El A3traf">
                                 </div>
+
+                            </div>
+
+                            <br/>
+
+                            <div class="input-group">
+                                <span class="input-group-addon last"><i class="zmdi zmdi-male-female"></i></span>
+                                <div class="fg-line">
+                                    <input type="text" name="gender" class="form-control" placeholder="Gender">
+                                </div>
+
+                            </div>
+
+                            <br/>
+
+                            <div class="input-group">
+                                <span class="input-group-addon last"><i class="zmdi zmdi-cake"></i></span>
+                                <div class="fg-line">
+                                    <input type="text" name="birthdate" class="form-control" placeholder="Birthday">
+                                </div>
+
+                            </div>
+
+                            <br/>
+
+                            <div class="input-group">
+                                <span class="input-group-addon last"><i class="zmdi zmdi-favorite"></i></span>
+                                <div class="fg-line">
+                                    <input type="text" name="marital_status" class="form-control" placeholder="Marital Status">
+                                </div>
+
                             </div>
                         </div>
 
                         <div class="col-sm-4">
                             <div class="input-group">
-                                <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="Ab El A3traf">
-                                </div>
-                                <span class="input-group-addon last"><i class="zmdi zmdi-landscape"></i></span>
-                            </div>
-
-                            <br/>
-
-                            <div class="input-group">
-                                <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="Gender">
-                                </div>
-                                <span class="input-group-addon last"><i class="zmdi zmdi-sun"></i></span>
-                            </div>
-
-                            <br/>
-
-                            <div class="input-group">
-                                <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="Birthday">
-                                </div>
-                                <span class="input-group-addon last"><i class="zmdi zmdi-airplane"></i></span>
-                            </div>
-
-                            <br/>
-
-                            <div class="input-group">
-                                <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="Material Status">
-                                </div>
-                                <span class="input-group-addon last"><i class="zmdi zmdi-my-location"></i></span>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="zmdi zmdi-arrow-missed"></i></span>
-                                <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="Mobile Phone">
-                                </div>
                                 <span class="input-group-addon last"><i class="zmdi zmdi-phone"></i></span>
+                                <div class="fg-line">
+                                    <input type="text" name="mobile_number" class="form-control" placeholder="Mobile Phone">
+                                </div>
                             </div>
 
                             <br/>
 
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="zmdi zmdi-money"></i></span>
-                                <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="facebook">
-                                </div>
                                 <span class="input-group-addon last"><i class="zmdi zmdi-facebook"></i></span>
+                                <div class="fg-line">
+                                    <input type="text" name='facebook_link' class="form-control" placeholder="facebook">
+                                </div>
                             </div>
 
                             <br/>
 
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="zmdi zmdi-mail-send"></i></span>
+                                <span class="input-group-addon last"><i class="zmdi zmdi-accounts-alt"></i></span>
                                 <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="Layers">
+                                    <input type="text" name="batch" class="form-control" placeholder="batch">
                                 </div>
-                                <span class="input-group-addon last"><i class="zmdi zmdi-layers "></i></span>
                             </div>
 
                             <br/>
 
+                            <br/>
+                            {{--address data --}}
+
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="zmdi zmdi-portable-wifi"></i></span>
+                                <span class="input-group-addon last"><i class="zmdi zmdi-arrow-right-top"></i></span>
+
                                 <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="Messages">
+                                    <input type="text" name="quarter" class="form-control" placeholder="quarter">
                                 </div>
-                                <span class="input-group-addon last"><i class="zmdi zmdi-dialpad"></i></span>
                             </div>
+
+                            <div class="input-group">
+                                <span class="input-group-addon last"><i class="zmdi zmdi-arrow-right-top"></i></span>
+
+                                <div class="fg-line">
+                                    <input type="text" name="street" class="form-control" placeholder="street">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <span class="input-group-addon last"><i class="zmdi zmdi-arrow-right-top"></i></span>
+
+                                <div class="fg-line">
+                                    <input type="text" name="zone_location" class="form-control" placeholder="zone location">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <span class="input-group-addon last"><i class="zmdi zmdi-arrow-right-top"></i></span>
+
+                                <div class="fg-line">
+                                    <input type="text" name="floor_number" class="form-control" placeholder="floor number">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <span class="input-group-addon last"><i class="zmdi zmdi-arrow-right-top"></i></span>
+
+                                <div class="fg-line">
+                                    <input type="text" name="appartment_number" class="form-control" placeholder="appartment number">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <span class="input-group-addon last"><i class="zmdi zmdi-arrow-right-top"></i></span>
+
+                                <div class="fg-line">
+                                    <input type="text" name="home_number" class="form-control" placeholder="home number">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <span class="input-group-addon last"><i class="zmdi zmdi-arrow-right-top"></i></span>
+
+                                <div class="fg-line">
+                                    <input type="text" name="details" class="form-control" placeholder="more details">
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -496,7 +542,7 @@
                                     <span class="btn btn-info btn-file">
                                         <span class="fileinput-new">Select image</span>
                                         <span class="fileinput-exists">Change</span>
-                                        <input type="file" name="...">
+                                        <input name='photo' type="file" name="...">
                                     </span>
                             <a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
                         </div>
@@ -506,7 +552,14 @@
                     <br/>
                     <p><em>Image preview only works in IE10+, FF3.6+, Safari6.0+, Chrome6.0+ and Opera11.1+. In older browsers the filename is shown instead.</em></p>
                 </div>
+
+                <button type="submit" class="btn btn-primary">Add Member</button>
+            </form>
+{{--                {!! Form::close() !!}--}}
+
             </div>
+
+
         </div>
     </section>
 
